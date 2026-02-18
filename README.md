@@ -88,8 +88,8 @@ Processing happens in the background — you can keep using your computer while 
 
 | Platform | Download |
 |----------|----------|
-| **macOS (Apple Silicon)** | [Download .dmg](https://github.com/SourceBuddy-ai/HireScribe-downloads/releases/latest) |
-| **Windows 10/11** | [Download .exe installer](https://github.com/SourceBuddy-ai/HireScribe-downloads/releases/latest) |
+| **macOS (Apple Silicon)** | [Download .dmg]([https://github.com/SourceBuddy-ai/HireScribe-downloads/releases/latest](https://github.com/SourceBuddy-ai/HireScribe-downloads/releases)) |
+| **Windows 10/11** | [Download .exe installer]([https://github.com/SourceBuddy-ai/HireScribe-downloads/releases/latest](https://github.com/SourceBuddy-ai/HireScribe-downloads/releases)) |
 
 ### macOS Installation
 1. Download the `.dmg` file
