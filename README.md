@@ -1,5 +1,4 @@
 # HireScribe
-
 Privacy-first interview transcription for recruiters. Record, transcribe, and summarize interviews with 100% local AI processing.
 
 **Your candidate data never leaves your computer.**
@@ -18,13 +17,14 @@ Built by a recruiter, for recruiters.
 
 ### Recording & Transcription
 - **One-click recording** from your microphone with built-in consent management
-- **Upload existing audio** (MP3, WAV, M4A, OGG) via drag-and-drop
+- **Upload existing audio** (MP3, WAV, M4A, OGG, FLAC, WEBM, MP4) via drag-and-drop
 - **AI-powered transcription** using Whisper models running entirely on your device
-- **Speaker identification** to distinguish who said what (optional)
+- **Speaker identification** to distinguish who said what (optional, macOS only)
 
 ### AI Summaries
-- **Three summary formats**: Bullet points, short summary, and detailed summary
-- **Customizable templates** for different interview types (screening, technical, behavioral, executive)
+- **Three summary formats**: Bullets (6–8 key takeaways), Short (3–4 sentence executive summary), and Medium (detailed summary organized by topic)
+- **11 built-in templates**: General Interview, Technical Interview, Behavioral Interview, Sales Interview, Executive Interview, Phone Screen, Hiring Manager Intake, Stakeholder Meeting, Client Discovery Call, Debrief Call, and Voice Memo
+- **Custom templates** — build your own with any sections you need
 - **Editable summaries** to add your own notes and insights
 - **Export to Markdown** for use in your ATS, notes, or team collaboration tools
 
@@ -40,9 +40,9 @@ Built by a recruiter, for recruiters.
 
 | Platform | Status | Notes |
 |----------|--------|-------|
-| **macOS (Apple Silicon)** | ✅ Fully Supported | M1/M2/M3/M4 Macs with GPU acceleration |
-| **macOS (Intel)** | ⚠️ Limited | May work but not tested |
-| **Windows** | 🚧 Coming Soon | Build ready, testing in progress |
+| **macOS (Apple Silicon)** | ✅ Fully Supported | M1/M2/M3/M4 with Metal GPU acceleration |
+| **macOS (Intel)** | ⚠️ Limited | May work but not officially tested |
+| **Windows 10/11** | ✅ Supported | CPU-based processing; speaker identification not yet available |
 | **Linux** | ❌ Not Available | Not planned for beta |
 
 ---
@@ -50,41 +50,62 @@ Built by a recruiter, for recruiters.
 ## System Requirements
 
 ### macOS (Apple Silicon)
-
 | Requirement | Minimum | Recommended |
 |-------------|---------|-------------|
+| **macOS** | 10.15 (Catalina) | 13.0+ (Ventura or newer) |
 | **Chip** | Apple M1 | Apple M1 or newer |
-| **macOS** | 11.0 (Big Sur) | 13.0+ (Ventura or newer) |
-| **RAM** | 8GB | 16GB |
-| **Storage** | 4GB free | 6GB free |
-| **Internet** | Required for initial setup only | |
+| **RAM** | 8 GB | 16 GB |
+| **Storage** | 3 GB free | 5 GB free |
+| **Internet** | Required for initial setup only | — |
+
+### Windows
+| Requirement | Minimum | Recommended |
+|-------------|---------|-------------|
+| **Windows** | Windows 10 (64-bit) | Windows 11 |
+| **RAM** | 4 GB | 8 GB |
+| **Storage** | 3 GB free | 5 GB free |
+| **Internet** | Required for initial setup only | — |
+
+> **macOS Apple Silicon** is the primary platform and benefits from Metal GPU acceleration for significantly faster transcription and summarization. Windows uses CPU-based processing, so expect longer processing times.
 
 ### Processing Performance
 
-On Apple Silicon with default settings:
+**macOS (Apple Silicon), default settings:**
 
 | Interview Length | Processing Time |
 |------------------|-----------------|
-| 5-10 minutes | ~6-9 minutes |
-| 15 minutes | ~15-18 minutes |
-| 30 minutes | ~25-35 minutes |
+| 6–7 minutes | ~5–10 minutes |
+| 15 minutes | ~15–18 minutes |
+| 30 minutes | ~25–35 minutes |
 
-Processing happens in the background, so you can keep using your computer.
+Processing happens in the background — you can keep using your computer while it runs.
 
 ---
 
 ## Download
 
-### Latest Beta Release
+### Latest Release (v0.2.0)
 
-**[Download HireScribe for macOS (Apple Silicon)](https://github.com/SourceBuddy-ai/HireScribe-downloads/releases/latest)**
+| Platform | Download |
+|----------|----------|
+| **macOS (Apple Silicon)** | [Download .dmg](https://github.com/SourceBuddy-ai/HireScribe-downloads/releases/latest) |
+| **Windows 10/11** | [Download .exe installer](https://github.com/SourceBuddy-ai/HireScribe-downloads/releases/latest) |
 
+### macOS Installation
 1. Download the `.dmg` file
-2. Open the DMG and drag HireScribe to Applications
+2. Open the DMG and drag HireScribe to your Applications folder
 3. Launch HireScribe and complete the setup wizard (~5 minutes)
 4. Start recording or upload your first interview
 
 *Note: On first launch, macOS may show a security prompt. Right-click the app and select "Open" to proceed.*
+
+### Windows Installation
+1. Download `HireScribe-Setup-x.x.x.exe`
+2. Run the installer and follow the prompts
+3. Launch HireScribe and complete the setup wizard (~5 minutes)
+4. Start recording or upload your first interview
+
+*Note: Windows may show a SmartScreen prompt on first launch. Click "More info" then "Run anyway" to proceed.*
 
 ---
 
@@ -92,18 +113,22 @@ Processing happens in the background, so you can keep using your computer.
 
 ### First-Time Setup
 
-The setup wizard guides you through:
+The setup wizard walks you through everything in about 5 minutes:
 
-1. **Hardware detection**: automatically configures for your Mac
-2. **AI engine initialization**: built-in, no external services needed
-3. **Model downloads**: one-time download of transcription (~500MB) and summarization (~2.6GB) models
-4. **Ready to go**: start recording immediately
+1. **Hardware detection** — automatically detects your platform and selects the right transcription engine (MLX on Apple Silicon, Faster-Whisper on Intel/Windows)
+2. **Disk space check** — confirms you have at least 3 GB free
+3. **AI engine setup** — starts the bundled local LLM server (no external service required)
+4. **Transcription quality** — choose your preferred Whisper model:
+   - **Fast** (`base`, ~150 MB) — quick processing, best for short screenings
+   - **Balanced** (`small`, ~500 MB) — recommended for most interviews
+   - **Best** (`medium`, ~1.5 GB) — maximum accuracy for senior/executive interviews
+5. **Model downloads** — one-time download of your chosen Whisper model and the Qwen3 summarization model
 
 ### Daily Use
 
 1. **Record** an interview or **upload** an existing audio file
-2. **Wait** for automatic transcription and summarization
-3. **Review** the transcript and AI-generated summaries
+2. **Wait** for automatic transcription and summarization (runs in the background)
+3. **Review** the transcript and AI-generated summaries in the Library
 4. **Edit** summaries to add your notes
 5. **Export** to Markdown for your records
 
@@ -111,10 +136,13 @@ The setup wizard guides you through:
 
 ## What's Included
 
-- **MLX Whisper**: GPU-accelerated transcription optimized for Apple Silicon
-- **Ollama**: local LLM engine (bundled, no separate installation)
-- **Qwen3 model**: summarization model optimized for interview analysis
-- **Speaker diarization**: identify who spoke when (optional feature)
+- **MLX Whisper** — GPU-accelerated transcription optimized for Apple Silicon
+- **Faster-Whisper** — CPU-based transcription for Intel Macs and Windows
+- **llama.cpp** — bundled local LLM server; no external service required
+- **Qwen3 (GGUF)** — summarization model optimized for interview analysis; two sizes available:
+  - **Qwen3 4B** (~2.5 GB, default) — recommended, requires 8 GB RAM
+  - **Qwen3 1.7B** (~1.2 GB) — lighter option for 4 GB RAM machines
+- **Speaker diarization** via pyannote.audio — identifies who spoke when (macOS only, optional, adds ~1–2 min)
 
 ---
 
@@ -122,41 +150,59 @@ The setup wizard guides you through:
 
 HireScribe is currently in beta. We're looking for feedback from recruiters who:
 
-- Use macOS with Apple Silicon (M1/M2/M3/M4)
+- Use macOS with Apple Silicon (M1/M2/M3/M4) or Windows 10/11
 - Record or transcribe interviews regularly
 - Care about candidate data privacy
 
 ### Providing Feedback
+- **In-app**: Use the feedback button (bottom-right corner of the app window) to report issues directly
 
-- **In-app**: Use the feedback button (bottom right corner of app window) to report issues directly
-- **GitHub**: [Open an issue](https://github.com/SourceBuddy-ai/HireScribe-downloads/issues) for bugs or feature requests
 
 ---
 
 ## FAQ
 
-**Q: Do I need an internet connection?**  
+**Q: Do I need an internet connection?**
 Only for the initial setup to download AI models. After that, HireScribe works completely offline.
 
-**Q: Where is my data stored?**  
-All data stays on your Mac in `~/Library/Application Support/Hire Scribe/`. Audio files, transcripts, and summaries never leave your device.
+**Q: Where is my data stored?**
+On macOS, data is stored in `~/Library/Application Support/Hire Scribe/`. On Windows, in `%APPDATA%\Hire Scribe\`. Audio files, transcripts, and summaries never leave your device.
 
-**Q: How accurate is the transcription?**  
-Whisper-based transcription achieves high accuracy for clear audio. Best results come from good microphones and minimal background noise.
+**Q: How accurate is the transcription?**
+Whisper-based transcription achieves high accuracy for clear audio. Best results come from a good microphone and minimal background noise. Choose the `medium` model for the highest accuracy.
 
-**Q: Can I use this for video call recordings?**  
-Yes. Record audio from your computer's microphone during calls, or upload audio exported from video conferencing platforms.
+**Q: Which Whisper model should I choose?**
+`small` is the default and the best balance of speed and accuracy for most interviews. Use `medium` for the highest accuracy, or `base` if you need faster processing on a less powerful machine.
 
-**Q: Is there a Windows version?**  
-Windows support is coming soon. The build is ready and we're completing testing.
+**Q: What summary formats does HireScribe generate?**
+Every recording automatically gets three formats: **Bullets** (6–8 key takeaways), **Short** (3–4 sentence executive summary), and **Medium** (detailed, organized by topic). All three are editable.
+
+**Q: Can I customize the summary structure?**
+Yes. HireScribe ships with 11 built-in templates covering common interview and meeting types. You can also create fully custom templates with your own sections.
+
+**Q: Can I use this for video call recordings?**
+Yes. Record audio from your microphone during calls, or upload audio exported from any video conferencing platform.
+
+**Q: Is speaker identification available on Windows?**
+Not yet. Speaker diarization is currently macOS only. It will be added to Windows in a future release.
+
+---
+
+## Keyboard Shortcuts
+
+| Shortcut | Action |
+|----------|--------|
+| `Cmd/Ctrl + Shift + F` | Open feedback modal |
+| `Cmd/Ctrl + ,` | Open Settings |
+| `Esc` | Close modals |
 
 ---
 
 ## Support
 
-- **Documentation**: See the Help tab within the app
+- **In-app Help**: See the Help tab within the app
 - **Issues**: [GitHub Issues](https://github.com/SourceBuddy-ai/HireScribe-downloads/issues)
-- **Email**: [Contact support]
+- **Email**: tyler@talmarkdigital.com 
 
 ---
 
