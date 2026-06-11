@@ -21,7 +21,7 @@ Built by a recruiter, for recruiters.
 - **AI-powered transcription** using Whisper models running entirely on your device
 - **Speaker identification** to distinguish who said what (optional, macOS only)
 
-### AI Summaries
+### AI Summaries (Pro)
 - **Three summary formats**: Bullets (6–8 key takeaways), Short (3–4 sentence executive summary), and Medium (detailed summary organized by topic)
 - **11 built-in templates**: General Interview, Technical Interview, Behavioral Interview, Sales Interview, Executive Interview, Phone Screen, Hiring Manager Intake, Stakeholder Meeting, Client Discovery Call, Debrief Call, and Voice Memo
 - **Custom templates** — build your own with any sections you need
@@ -32,7 +32,22 @@ Built by a recruiter, for recruiters.
 - **100% local processing**: no cloud, no external APIs
 - **Works offline** after initial setup
 - **GDPR-friendly**: you control where data is stored
-- **No subscriptions**: one-time setup, unlimited use
+- **No subscriptions**: the free tier is free forever; Pro is a one-time purchase
+
+---
+
+## Pricing
+
+| | Free | Pro ($79, one-time) |
+|---|---|---|
+| Recording & consent management | ✅ | ✅ |
+| File upload & transcription | ✅ | ✅ |
+| Speaker identification (macOS) | ✅ | ✅ |
+| Full transcripts | ✅ | ✅ |
+| AI summaries (all formats & templates) | — | ✅ |
+| Updates | — | 12 months included |
+
+Buy a Pro license at [gethirescribe.com/pricing](https://gethirescribe.com/pricing). Your license key arrives by email; activate it in **Settings → License**. One key works on both Mac and Windows.
 
 ---
 
@@ -84,12 +99,12 @@ Processing happens in the background — you can keep using your computer while 
 
 ## Download
 
-### Latest Release (v0.2.0)
+### Latest Release (v1.0.0)
 
 | Platform | Download |
 |----------|----------|
-| **macOS (Apple Silicon)** | [Download .dmg]([https://github.com/SourceBuddy-ai/HireScribe-downloads/releases/latest](https://github.com/SourceBuddy-ai/HireScribe-downloads/releases)) |
-| **Windows 10/11** | [Download .exe installer]([https://github.com/SourceBuddy-ai/HireScribe-downloads/releases/latest](https://github.com/SourceBuddy-ai/HireScribe-downloads/releases)) |
+| **macOS (Apple Silicon)** | [Download .dmg](https://github.com/SourceBuddy-ai/HireScribe-downloads/releases/latest) |
+| **Windows 10/11** | [Download .exe installer](https://github.com/SourceBuddy-ai/HireScribe-downloads/releases/latest) |
 
 ### macOS Installation
 1. Download the `.dmg` file
@@ -146,16 +161,12 @@ The setup wizard walks you through everything in about 5 minutes:
 
 ---
 
-## Beta Program
+## Feedback
 
-HireScribe is currently in beta. We're looking for feedback from recruiters who:
+We're building HireScribe with and for working recruiters — feedback shapes the roadmap.
 
-- Use macOS with Apple Silicon (M1/M2/M3/M4) or Windows 10/11
-- Record or transcribe interviews regularly
-- Care about candidate data privacy
-
-### Providing Feedback
 - **In-app**: Use the feedback button (bottom-right corner of the app window) to report issues directly
+- **Issues**: [GitHub Issues](https://github.com/SourceBuddy-ai/HireScribe-downloads/issues)
 
 
 ---
@@ -208,7 +219,7 @@ Not yet. Speaker diarization is currently macOS only. It will be added to Window
 
 ## License
 
-HireScribe is proprietary software. See [EULA](link) and [Privacy Policy](link) for details.
+HireScribe is proprietary software. See the [EULA](https://gethirescribe.com/eula) and [Privacy Policy](https://gethirescribe.com/privacy) for details.
 
 ---
 
