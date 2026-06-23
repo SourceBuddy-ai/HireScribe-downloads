@@ -58,7 +58,7 @@ Buy a Pro license at [gethirescribe.com/pricing](https://gethirescribe.com/prici
 | **macOS (Apple Silicon)** | ✅ Fully Supported | M1/M2/M3/M4 with Metal GPU acceleration |
 | **macOS (Intel)** | ⚠️ Limited | May work but not officially tested |
 | **Windows 10/11** | ✅ Supported | CPU-based processing; speaker identification not yet available |
-| **Linux** | ❌ Not Available | Not planned for beta |
+| **Linux** | ❌ Not Available | Not planned |
 
 ---
 
@@ -99,7 +99,7 @@ Processing happens in the background — you can keep using your computer while 
 
 ## Download
 
-### Latest Release (v1.0.0)
+### Latest Release (v1.0.2)
 
 | Platform | Download |
 |----------|----------|
