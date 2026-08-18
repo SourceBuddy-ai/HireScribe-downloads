@@ -19,7 +19,7 @@ Built by a recruiter, for recruiters.
 - **One-click recording** from your microphone with built-in consent management
 - **Upload existing audio** (MP3, WAV, M4A, OGG, FLAC, WEBM, MP4) via drag-and-drop
 - **AI-powered transcription** using Whisper models running entirely on your device
-- **Speaker identification** to distinguish who said what (optional, macOS only)
+- **Speaker identification** to distinguish who said what
 
 ### AI Summaries (Pro)
 - **Three summary formats**: Bullets (6–8 key takeaways), Short (3–4 sentence executive summary), and Medium (detailed summary organized by topic)
@@ -42,7 +42,7 @@ Built by a recruiter, for recruiters.
 |---|---|---|
 | Recording & consent management | ✅ | ✅ |
 | File upload & transcription | ✅ | ✅ |
-| Speaker identification (macOS) | ✅ | ✅ |
+| Speaker identification | ✅ | ✅ |
 | Full transcripts | ✅ | ✅ |
 | AI summaries (all formats & templates) | — | ✅ |
 | Updates | — | 12 months included |
@@ -57,7 +57,7 @@ Buy a Pro license at [gethirescribe.com/pricing](https://gethirescribe.com/prici
 |----------|--------|-------|
 | **macOS (Apple Silicon)** | ✅ Fully Supported | M1/M2/M3/M4 with Metal GPU acceleration |
 | **macOS (Intel)** | ⚠️ Limited | May work but not officially tested |
-| **Windows 10/11** | ✅ Supported | CPU-based processing; speaker identification not yet available |
+| **Windows 10/11** | ✅ Supported | CPU transcription; Vulkan GPU summarization when available |
 | **Linux** | ❌ Not Available | Not planned |
 
 ---
@@ -81,7 +81,7 @@ Buy a Pro license at [gethirescribe.com/pricing](https://gethirescribe.com/prici
 | **Storage** | 3 GB free | 5 GB free |
 | **Internet** | Required for initial setup only | — |
 
-> **macOS Apple Silicon** is the primary platform and benefits from Metal GPU acceleration for significantly faster transcription and summarization. Windows uses CPU-based processing, so expect longer processing times.
+> **macOS Apple Silicon** is the primary platform and benefits from Metal GPU acceleration for significantly faster transcription and summarization. Windows transcription runs on the CPU; summarization uses Vulkan when a compatible GPU is available.
 
 ### Processing Performance
 
@@ -99,12 +99,12 @@ Processing happens in the background — you can keep using your computer while 
 
 ## Download
 
-### Latest Release (v1.0.2)
+### Latest Release
 
-| Platform | Download |
-|----------|----------|
-| **macOS (Apple Silicon)** | [Download .dmg](https://github.com/SourceBuddy-ai/HireScribe-downloads/releases/latest) |
-| **Windows 10/11** | [Download .exe installer](https://github.com/SourceBuddy-ai/HireScribe-downloads/releases/latest) |
+| Platform | Version | Download |
+|----------|---------|----------|
+| **macOS (Apple Silicon)** | v1.2.1 | [Download .dmg](https://github.com/SourceBuddy-ai/HireScribe-downloads/releases/latest) |
+| **Windows 10/11** | v1.3.0 | [Download .exe installer](https://github.com/SourceBuddy-ai/HireScribe-downloads/releases/latest) |
 
 ### macOS Installation
 1. Download the `.dmg` file
@@ -157,7 +157,7 @@ The setup wizard walks you through everything in about 5 minutes:
 - **Qwen3 (GGUF)** — summarization model optimized for interview analysis; two sizes available:
   - **Qwen3 4B** (~2.5 GB, default) — recommended, requires 8 GB RAM
   - **Qwen3 1.7B** (~1.2 GB) — lighter option for 4 GB RAM machines
-- **Speaker diarization** via pyannote.audio — identifies who spoke when (macOS only, optional, adds ~1–2 min)
+- **Speaker diarization** via pyannote.audio — identifies who spoke when (optional, adds ~1–2 min)
 
 ---
 
@@ -195,7 +195,7 @@ Yes. HireScribe ships with 11 built-in templates covering common interview and m
 Yes. Record audio from your microphone during calls, or upload audio exported from any video conferencing platform.
 
 **Q: Is speaker identification available on Windows?**
-Not yet. Speaker diarization is currently macOS only. It will be added to Windows in a future release.
+Yes. The current Windows installer includes speaker diarization. On first use it may need to download models; after that it runs locally.
 
 ---
 
